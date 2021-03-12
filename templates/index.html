@@ -6,8 +6,12 @@
 </head>
 <body>
     <h1> Bonjour {{ nom }}</h1>
+    <table>
     {% for p in perso %}
-    <p>coucou</p>
+        <tr>
+            <td>{{ p.nom }}</td>
+        </tr>
     {% endfor %}
+    </table>
 </body>
 </html>
