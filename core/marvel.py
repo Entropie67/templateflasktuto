@@ -17,3 +17,15 @@ def liste_perso():
         print(f"{p['nom']} dit {p['surnom']} possède une puissance égale : {p['puissance']}")
     return perso
 
+def power_up(id, power):
+    connexion = sqlite3.connect('core/marvel.db')
+    curseur = connexion.cursor()
+    # https://sql.sh/cours/update
+    sql = f'''UPDATE personnage 
+        SET puissance = {power}
+        WHERE idpersonnage = {id}'''
+    curseur.execute(sql)
+    connexion.commit()
+
+
+power_up(4, 300)

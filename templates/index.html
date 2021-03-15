@@ -14,6 +14,7 @@
         <th>Sex</th>
         <th>Surnom</th>
         <th>Lien</th>
+        <th>Like</th>
     </tr>
     {% for p in perso %}
         <tr>
@@ -21,7 +22,9 @@
             <td>{{ p.puissance }}</td>
             <td>{{ p.sexe }}</td>
             <td>{{ p.surnom }}</td>
-            <td>{{ p.lien }}</td>
+            <td><a href="{{ p.lien }}">{{ p.lien }}</a></td>
+            <td><button class="like" type="button">like</button>
+            </td>
         </tr>
     {% endfor %}
     </table>
