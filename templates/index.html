@@ -6,6 +6,11 @@
     <title>{{ titre}}</title>
 </head>
 <body>
+<header>
+    <button class="like" type="button">Connexion</button>
+    <button class="like" type="button">Inscription</button>
+</header>
+
     <h1>Que est le meilleur personnage Marvel ?</h1>
     <table>
     <tr>
@@ -25,8 +30,7 @@
             <td>{{ p.sexe }}</td>
             <td>{{ p.surnom }}</td>
             <td><a href="{{ p.lien }}">{{ p.lien }}</a></td>
-            <td><button class="like" type="button">like</button>
-            </td>
+            <td><button class="like" type="button">like</button></td>
         </tr>
     {% endfor %}
     </table>

@@ -28,3 +28,16 @@ def power_up(id, power):
     connexion.commit()
 
 
+def utilisateurtable():
+    connexion = sqlite3.connect('core/marvel.db')
+    curseur = connexion.cursor()
+    sql = '''CREATE TABLE utilisateur(
+        id INTEGER PRIMARY KEY AUTOINCREMENT,
+        pseudo VARCHAR(100),
+        mdp VARCHAR(255),  
+        like VARCHAR(255)
+    )'''
+    curseur.execute(sql)
+    connexion.commit()
+
+#utilisateurtable()
