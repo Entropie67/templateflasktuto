@@ -9,7 +9,6 @@ def main():
     perso = liste_perso()
     return render_template('index.html', titre='Mon Site', nom='Ilano El Clandestino', perso=perso)
 
-
 @app.route('/coucou/')
 def coucou():
     return 'Coucou !'
