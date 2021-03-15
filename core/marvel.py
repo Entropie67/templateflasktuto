@@ -28,4 +28,3 @@ def power_up(id, power):
     connexion.commit()
 
 
-power_up(4, 300)

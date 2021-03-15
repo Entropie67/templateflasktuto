@@ -1,15 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}"/>
     <title>{{ titre}}</title>
 </head>
 <body>
-    <h1> Bonjour {{ nom }}</h1>
+    <h1>Que est le meilleur personnage Marvel ?</h1>
     <table>
     <tr>
         <th> Nom</th>
+        <th> Nom civil</th>
         <th>power</th>
         <th>Sex</th>
         <th>Surnom</th>
@@ -19,6 +20,7 @@
     {% for p in perso %}
         <tr>
             <td>{{ p.nom }}</td>
+            <td>{{ p.nom_civil }}</td>
             <td>{{ p.puissance }}</td>
             <td>{{ p.sexe }}</td>
             <td>{{ p.surnom }}</td>
